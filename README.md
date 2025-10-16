@@ -32,7 +32,7 @@ All activity is logged both to STDOUT and to `/app/logs/service.log`.
 └── output/                   # Mount point for scoring results
 ```
 
-> **Note:** The service expects the model artefact and preprocessing pipeline files to be present before startup. They are pre loaded in this repo and can be reproduced with the training notebook under `.train_model/`.
+> **Note:** The service expects the model artefact and preprocessing pipeline files to be present before startup. They are pre loaded in this repo and can be reproduced with the training notebook under `.train_model/`. Train and test data can be found [here](https://www.kaggle.com/competitions/teta-ml-1-2025/data)
 
 ## Data Processing Pipeline (`src/preprocessing.py`)
 
