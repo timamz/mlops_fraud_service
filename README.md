@@ -94,7 +94,7 @@ The following environment variables can be provided (`docker run -e KEY=value ..
 | `PREPROCESSORS_DIR` | `/app/preprocessors` | Directory with preprocessing artefacts |
 | `SCORE_THRESHOLD` | `0.5` | Probability threshold for classifying fraud |
 
-### ## Build & Run with custom paths and threshold
+### Build & Run with custom paths and threshold
 
 ```bash
 docker run -it --rm \
