@@ -93,3 +93,23 @@ The following environment variables can be provided (`docker run -e KEY=value ..
 | `MODEL_PATH` | `${MODELS_DIR}/logreg_model.joblib` | Explicit path to the model file |
 | `PREPROCESSORS_DIR` | `/app/preprocessors` | Directory with preprocessing artefacts |
 | `SCORE_THRESHOLD` | `0.5` | Probability threshold for classifying fraud |
+
+### ## Build & Run with custom paths and threshold
+
+```bash
+docker run -it --rm \
+  -v /path/to/input:/data/input \
+  -v /path/to/output:/data/output \
+  -v /path/to/models:/data/models \
+  -v /path/to/preprocessors:/data/preprocessors \
+  -e INPUT_DIR=/data/input \
+  -e OUTPUT_DIR=/data/output \
+  -e MODELS_DIR=/data/models \
+  -e MODEL_PATH=/data/models/logreg_model.joblib \
+  -e PREPROCESSORS_DIR=/data/preprocessors \
+  -e SCORE_THRESHOLD=0.66 \
+  fraud-service
+```
+
+1. Replace `/path/to/...` with the host directories you want to mount.
+2. Adjust `SCORE_THRESHOLD` or other env vars for your deployment.
