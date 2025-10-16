@@ -61,6 +61,11 @@ All activity is logged both to STDOUT and to `/app/logs/service.log`.
 - Docker 20.10+
 - ~1 GB free disk space for the image and artefacts
 
+```bash
+git clone https://github.com/timamz/mlops_fraud_service
+cd mlops_fraud_service
+```
+
 ## Build & Run
 
 ```bash
